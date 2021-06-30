@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eduardo</title>
+    <style>
+        td,
+        tr,
+        table {
+            border: 1px solid black;
+
+        }
+
+        body{
+            background-color: #CCC;
+        }
+    </style>
+</head>
+
+<body>
+
+<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/>
+
+<h1>USUÁRIOS</h1>
+
+<table>
+    <tr>
+        <th>NOME</th>
+        <th>SOBRENOME</th>
+        <th>IDADE</th>
+
+    </tr>
+    <tr th:each="jedi : ${allJedi}">
+        <td th:text="${jedi.name}"> </td>
+        <td th:text="${jedi.lastName}"> </td>
+        <td th:text="${jedi.idade}"> </td>
+
+    </tr>
+</table>
+
+<br>
+
+<a href="#" th:href="@{/new-jedi}">Novo usuário</a>
+
+</body>
+</html>
