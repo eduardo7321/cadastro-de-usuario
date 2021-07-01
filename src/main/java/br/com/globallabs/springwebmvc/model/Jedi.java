@@ -1,6 +1,8 @@
 package br.com.globallabs.springwebmvc.model;
 
 public class Jedi {
+
+
     private String idade;
     private String name;
     private String lastName;
