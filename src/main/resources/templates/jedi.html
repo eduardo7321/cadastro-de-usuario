@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Eduardo</title>
-    <style>
-        td,
-        tr,
-        table {
-            border: 1px solid black;
 
-        }
+   <!-- <link rel="stylesheet" href="/css/bootstrap.mim.css">-->
 
-        body{
-            background-color: #CCC;
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
 </head>
 
-<body>
+<body class="text-center">
 
-<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/>
+<!--<div class="alert alert-success" role="alert">
+    This is a success alert—check it out!
+</div> -->
+
+<!--<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"/>-->
+
+<div th:if="${message}" th:text="${message}" class="alert alert-success" role="alert"/>
+
 
 <h1>USUÁRIOS</h1>
 
-<table>
-    <tr>
+<table class="table table-striped">
+    <tr class="thead-dark">
         <th>NOME</th>
         <th>SOBRENOME</th>
         <th>IDADE</th>
 
     </tr>
+
+   <!-- <div class="text-center"> -->
     <tr th:each="jedi : ${allJedi}">
         <td th:text="${jedi.name}"> </td>
         <td th:text="${jedi.lastName}"> </td>
         <td th:text="${jedi.idade}"> </td>
 
     </tr>
+    <!-- </div> -->
 </table>
 
 <br>
 
-<a href="#" th:href="@{/new-jedi}">Novo usuário</a>
+<a href="#" th:href="@{/new-jedi}" class="btn btn-primary">Novo usuário</a>
 
 </body>
 </html>
