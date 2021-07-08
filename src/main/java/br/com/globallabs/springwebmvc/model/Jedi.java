@@ -3,14 +3,16 @@ package br.com.globallabs.springwebmvc.model;
 public class Jedi {
 
 
-    private String idade;
+    private String email;
     private String name;
     private String lastName;
+    private String telefone;
 
-    public Jedi(final String name, String lastname, String idade) {
+    public Jedi(final String name, String lastname, String email, String telefone) {
       this.name = name;
       this.lastName = lastname;
-      this.idade = idade;
+      this.email = email;
+      this.telefone = telefone;
     }
 
     public Jedi() {
@@ -32,11 +34,19 @@ public class Jedi {
         this.lastName = lastName;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getEmail() {
+        return email;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

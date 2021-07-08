@@ -12,7 +12,7 @@ public class JediRepository {
 
     public JediRepository() {
         jedi = new ArrayList<>();
-        jedi.add(new Jedi("Luke", "Skywlker", "19"));
+      // jedi.add(new Jedi("Luke", "Skywlker", "teste@gmail.com"));
     }
 
     public List<Jedi> getAllJedi(){

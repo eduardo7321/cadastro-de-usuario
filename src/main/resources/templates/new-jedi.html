@@ -9,15 +9,14 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
 </head>
-<body class="text-center">
+<body>
 
 <!-- <div class="row d-flex justify-content-center"> -->
 
 
-
-
-<div>
+<div class="text-center">
 
 <h1>Novo Cadastro</h1>
 
@@ -30,8 +29,12 @@
   <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">LastName Error</span>
   <br/>
 
-  <input type="text" name="idade" th:field="*{idade}" th:placeholder="Idade"/> <br/>
-  <span th:if="${#fields.hasErrors('idade')}" th:errors="*{idade}">Idade Error</span>
+  <input type="text" name="email" th:field="*{email}" th:placeholder="email"/> <br/>
+  <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Idade Error</span>
+  <br/>
+
+  <input type="text" name="telefone" th:field="*{telefone}" th:placeholder="Telefone"/> <br/>
+  <span th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}">Telefonee Error</span>
   <br/>
 
 
@@ -40,8 +43,16 @@
 </form>
 
 <br>
+  <br>
 
-<a th:href="@{/jedi}">Lista de Pessoas</a>
+<a class="bi bi-list-ul" th:href="@{/jedi}">Lista de Pessoas
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+  </svg>
+  </a>
+
 </div>
+
 </body>
+
 </html>
